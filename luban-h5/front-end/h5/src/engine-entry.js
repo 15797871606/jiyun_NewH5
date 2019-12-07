@@ -45,8 +45,7 @@ const Engine = {
     const work = window.__work
     return (
       <div id="work-container" data-work-id={work.id}>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">{
+        {
             work.pages.map(page => {
               return (
                 <section class="swiper-slide flat" >
@@ -55,9 +54,8 @@ const Engine = {
                 </section>
               )
             })
-          }</div>
+          }
           {/** <div class="swiper-pagination"></div> */}
-        </div>
       </div>
     )
   }
